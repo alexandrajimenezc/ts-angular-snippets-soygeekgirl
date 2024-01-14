@@ -1,0 +1,86 @@
+{
+  "Generate simple input": {
+    "scope": "html",
+    "prefix": "_si",
+    "body": [
+      "\n<div class=\"$1\">",
+      "<input type=\"$2\" class=\"$3\" value=\"$4\"> ",
+      "$3",
+      "\n</div>\n"
+    ]
+  },
+  "Generate input with class row and column ": {
+    "scope": "html",
+    "prefix": "_irc",
+    "body": [
+		"\n<div class=\"${1:row}\">",
+		"\n<div class=\"${2:column}\">",
+		"<input type=\"$2\" class=\"$3\" value=\"$4\"> ",
+		"$3",
+		"\n</div>\n"
+		"\n</div>\n"
+    ]
+  },
+  "Generate input with class row and column and formControl": {
+    "scope": "html",
+    "prefix": "_irc",
+    "body": [
+		"\n<div class=\"${1:row}\">",
+		"\n<div class=\"${2:column}\">",
+		"<input type=\"$3\" class=\"$4\" [formControl]=\"$5\"> ",
+		"$3",
+		"\n</div>\n"
+		"\n</div>\n"
+    ],
+	"description": "Create html to input with formControl and div class with editable class row and column"
+  },
+  "ngFor Loop ": {
+    "scope": "html",
+    "prefix": ["ngfor", "_for"],
+    "body": [
+      "*ngFor=\"let ${2:element} of ${1:array}; index as i; trackBy: trackByFn\""
+    ],
+    "description": "A ngfor loop."
+  },
+  "li For Loop ngFor": {
+    "scope": "html",
+    "prefix": ["ngforli", "_forli"],
+    "body": [
+      "<li *ngFor=\"let ${2:element} of ${1:array}; index as i; trackBy: trackByFn\">",
+      "</li>"
+    ],
+    "description": "A ngfor loop."
+  },
+  "create export interface": {
+    "scope": "typescript",
+    "prefix": "_ci",
+    "body": [
+      " export interface ${TM_FILENAME_BASE}{ ",
+      "",
+      " label: string;",
+      "}"
+    ],
+	"description": "Typescript create exportable interface"
+  },
+  "create private var": {
+    "scope": "typescript",
+    "prefix": "_pv",
+    "body": [
+      " private ${1:_varPrivate}:${2:Component}",
+      
+    ],
+	"description": "Typescript create private var to constructor"
+  },
+  "create public var": {
+    "scope": "typescript",
+    "prefix": "_puv",
+    "body": [
+      " public ${1:_varPrivate}:${2:string}",
+      
+    ],
+	"description": "Typescript private var type string"
+  },
+  
+}
+
+

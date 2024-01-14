@@ -1,0 +1,41 @@
+{
+  "name": "ts-angular-snippets-soygeekgirl",
+  "displayName": "ts-angular-snippets-soygeekgirl",
+  "description": "snippets para usar en angular y crear variables y métodos de forma rapida",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ],
+    "keybindings": [
+      {
+        "key": "ctrl+f1",
+        "mac": "cmd+f1",
+        "when": "editorTextFocus",
+        "args": {
+          "snippet": "\n${TM_CURRENT_LINE}\nconsole.log('Fichero ${TM_FILENAME_BASE}--->linea ${TM_LINE_NUMBER}  - variable ${TM_CURRENT_WORD},');\n"
+        },
+        "command": "editor.action.insertSnippet"
+      }
+    ]
+    
+  }
+  
+}

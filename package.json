@@ -3,6 +3,7 @@
   "displayName": "ts-angular-snippets-soygeekgirl",
   "description": "snippets para usar en angular y crear variables y métodos de forma rapida",
   "version": "0.0.1",
+  "publisher": "ts-angular-snippets-soygeekgirl",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -36,6 +37,12 @@
       }
     ]
     
-  }
+  },
+  "repository": {
+    "url": "https://github.com/alexandrajimenezc/ts-angular-snippets-soygeekgirl",
+    "type": "git",
+    "directory": "."
+  },
+  "license":"LICENSE.TXT"
   
 }

@@ -17,19 +17,19 @@
 		"\n<div class=\"${2:column}\">",
 		"<input type=\"$2\" class=\"$3\" value=\"$4\"> ",
 		"$3",
-		"\n</div>\n"
+		"\n</div>\n",
 		"\n</div>\n"
     ]
   },
   "Generate input with class row and column and formControl": {
     "scope": "html",
-    "prefix": "_irc",
+    "prefix": "_ircf",
     "body": [
 		"\n<div class=\"${1:row}\">",
 		"\n<div class=\"${2:column}\">",
 		"<input type=\"$3\" class=\"$4\" [formControl]=\"$5\"> ",
 		"$3",
-		"\n</div>\n"
+		"\n</div>\n",
 		"\n</div>\n"
     ],
 	"description": "Create html to input with formControl and div class with editable class row and column"
@@ -51,9 +51,19 @@
     ],
     "description": "A ngfor loop."
   },
-  "create export interface": {
+  "if new selected html block angular": {
+    "scope": "html",
+    "prefix": ["_ifs"],
+    "body": [
+      "@if(${1:condition}){",
+      "${TM_SELECTED_TEXT}",
+      "}"
+    ],
+    "description": "A ngfor loop."
+  },
+  "create export file interface": {
     "scope": "typescript",
-    "prefix": "_ci",
+    "prefix": "_cfi",
     "body": [
       " export interface ${TM_FILENAME_BASE}{ ",
       "",
@@ -62,25 +72,134 @@
     ],
 	"description": "Typescript create exportable interface"
   },
-  "create private var": {
+  "create export interface": {
+    "scope": "typescript",
+    "prefix": "_ci",
+    "body": [
+      " export interface ${TM_SELECTED_TEXT}{ ",
+      "",
+      " label: string;",
+      "}"
+    ],
+	"description": "Typescript create exportable interface"
+  },
+  "create export enum": {
+    "scope": "typescript",
+    "prefix": "_ce",
+    "body": [
+      " export enum ${TM_SELECTED_TEXT}{ ",
+      "",
+      "  ${1:LABEL}=  ${2:'value'}",
+      "}"
+    ],
+	"description": "Typescript create exportable enum"
+  },
+  "create export enum file": {
+    "scope": "typescript",
+    "prefix": "_ce",
+    "body": [
+      " export enum ${TM_FILENAME_BASE}{ ",
+      "",
+      "  ${1:LABEL}=  ${2:'value'}",
+      "}"
+    ],
+	"description": "Typescript create exportable enum"
+  },
+  "create export type file": {
+    "scope": "typescript",
+    "prefix": "_cft",
+    "body": [
+      " export type ${TM_FILENAME_BASE}={ ",
+      "",
+      " ${1:label}=  ${2:'value'}",
+      "}"
+    ],
+	"description": "Typescript create exportable enum"
+  },
+  "create export type": {
+    "scope": "typescript",
+    "prefix": "_ct",
+    "body": [
+      " export type ${TM_SELECTED_TEXT}={ ",
+      "",
+      " ${1:label}=  ${2:'value'}",
+      "}"
+    ],
+	"description": "Typescript create exportable enum"
+  },
+  "create private constructor var": {
     "scope": "typescript",
     "prefix": "_pv",
     "body": [
-      " private ${1:_varPrivate}:${2:Component}",
+      " private readonly ${1:_varPrivate}:${2:Component},",
       
     ],
 	"description": "Typescript create private var to constructor"
   },
-  "create public var": {
+  "create public var type boolean": {
     "scope": "typescript",
-    "prefix": "_puv",
+    "prefix": "_puvb",
     "body": [
-      " public ${1:_varPrivate}:${2:string}",
+      " public ${1:varPublic}:${2:boolean};",
+      
+    ],
+	"description": "Typescript private var type boolean"
+  },
+  "create public var type string": {
+    "scope": "typescript",
+    "prefix": "_puvs",
+    "body": [
+      " public ${1:varPublic}:${2:string};",
       
     ],
 	"description": "Typescript private var type string"
   },
-  
+  "create public var number": {
+    "scope": "typescript",
+    "prefix": "_puvn",
+    "body": [
+      " public ${1:varPublic}:${2:number};",
+      
+    ],
+	"description": "Typescript private var type number"
+  },
+  "create public var type array": {
+    "scope": "typescript",
+    "prefix": "_puva",
+    "body": [
+      " public ${1:varPublic}:${2:[]};",
+      
+    ],
+	"description": "Typescript private var type array"
+  },
+  "create TODO": {
+    "scope": "typescript",
+    "prefix": "_td",
+    "body": [
+      " ${LINE_COMMENT} <----- TODO ${1:text}",
+      
+    ],
+	"description": "Typescript TODO"
+  },
+  "create || condition": {
+    "scope": "typescript",
+    "prefix": "_c|",
+    "body": [
+      " ${1:condition1} || ${2:condition2}",
+      
+    ],
+	"description": "Typescript condition1 || condition2"
+  },
+  "create && condition": {
+    "scope": "typescript",
+    "prefix": "_c&",
+    "body": [
+      " ${1:condition1} && ${2:condition2}",
+      
+    ],
+	"description": "Typescript condition1 && condition2"
+  },
+
 }
 
 

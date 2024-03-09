@@ -2,7 +2,7 @@
   "name": "ts-angular-snippets-soygeekgirl",
   "displayName": "ts-angular-snippets-soygeekgirl",
   "description": "snippets para usar en angular y crear variables y métodos de forma rapida",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "ts-angular-snippets-soygeekgirl",
   "engines": {
     "vscode": "^1.85.0"
